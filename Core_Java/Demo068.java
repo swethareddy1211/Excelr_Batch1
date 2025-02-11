@@ -1,14 +1,20 @@
+class PrintEvenCount{
+    int evenCount(int[] arr){
+        int[] even = arr;int count=0;
+        for (int i = 0; i< even.length; i++){
+            if (even[i] % 2 == 0) {
+            //System.out.print(even[i]+" ");
+            count++;
+            }
+        } 
+        return count;
+    }
+}
 public class Demo068 {
     public static void main(String[] args) {
-        int[] array = {1, 2, 3, 4, 5, 6};
-        int count = 0;
-
-        for (int i = 0; i < array.length; i++) {
-            if (array[i] % 2 == 0) {
-                count++;
-            }
-        }
-
-        System.out.println("Count of even numbers: " + count);
+        PrintEvenCount obj = new PrintEvenCount();
+        int[] arr = {10,50,89,90,23,100,59};
+        int Count = obj.evenCount(arr);
+        System.out.println(Count);
     }
 }
