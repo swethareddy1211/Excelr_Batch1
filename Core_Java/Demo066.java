@@ -1,10 +1,15 @@
+class PrintArrayIndex{
+    void printArrIndex(int[] arr){
+        int[] newArr = arr;
+        for (int i = 0; i< newArr.length; i++){
+            System.out.print(i+" ");
+        } 
+    }
+}
 public class Demo066 {
     public static void main(String[] args) {
-        int[] array = {10, 20, 30, 40, 50};
-
-        System.out.println("Index Values:");
-        for (int i = 0; i < array.length; i++) {
-            System.out.println("Index: " + i + ", Value: " + array[i]);
-        }
+        PrintArrayIndex obj = new PrintArrayIndex();
+        int[] arr = {10,50,80,90,20};
+        obj.printArrIndex(arr);
     }
 }
