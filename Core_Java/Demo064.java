@@ -1,12 +1,19 @@
-import java.util.Arrays;
-
+class SwapArrayElements{
+    void swap(int[] arr){
+        int len = arr.length;
+        System.out.println(arr[0] + "    "+ arr[len-1]);      //--> 5 , 10
+        arr[0] = arr[0] + arr[len-1];          //--> 15 = 5 + 10
+        // System.out.println(arr[0] + "    "+ arr[len-1]);
+        arr[len-1] = arr[0] - arr[len-1]; //--> 5 = 15 - 10
+        // System.out.println(arr[0] + "    "+ arr[len-1]);
+        arr[0] = arr[0] - arr[len-1];      //--> 10 = 15 - 5
+        System.out.println(arr[0] + "    "+ arr[len-1]);
+    }
+}
 public class Demo064 {
     public static void main(String[] args) {
-        int[] arr = {2, 3, 5, 7};
-        System.out.println("Before Swapping: " + Arrays.toString(arr));
-        arr[0] = arr[0] + arr[3];
-        arr[3] = arr[0] - arr[3];
-        arr[0] = arr[0] - arr[3];
-        System.out.println("After Swapping: " + Arrays.toString(arr));
+        SwapArrayElements obj = new SwapArrayElements();
+        int[] arr = {10,20,50,80};
+        obj.swap(arr);
     }
 }
